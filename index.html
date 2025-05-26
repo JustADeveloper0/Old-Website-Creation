@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Plain</title>
+    </head>
+    <body>
+        
+        <nav>
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img id="logo-img" src="Assets/Logo.png">
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="about.html">About</a></li>
+                <li class="link"><a href="products.html">Products</a></li>
+            </ul>
+
+            <button class="btn" id="suBtn" onclick=suFunc()>Sign Up</button>
+            <button class="btn" id="siBtn" onclick=siFunc()>Sign In</button>
+        </nav> 
+
+        <div class="Section_1">
+            <h1 id="Title">Home</h1>
+        </div>
+
+        <div id="signup-form">
+            <button class="CloseButton" onclick=close1Func()>
+                <image id="CloseImg" src="Assets/Close.png">
+            </button>
+            <h1 id="suTitle">Sign Up</h1>
+
+            <p class="suP">Email: </p>
+            <input class="sui">
+            <p class="suP">Username: </p>
+            <input class="sui">
+            <p class="suP">Password: </p>
+            <input class="sui">
+            <p class="suP">Password Again: </p>
+            <input class="sui">
+
+            <br>
+
+            <button class="suBtn" onclick=suFuncSQL()>Sign Up</button>
+        </div>
+
+        <div id="signin-form">
+            <button class="CloseButton" onclick=close2Func()>
+                <image id="CloseImg" src="Assets/Close.png">
+            </button>
+            <h1 id="siTitle">Sign In</h1>
+
+            <p class="siP">Email or Username: </p>
+            <input class="sii">
+            <p class="siP">Password: </p>
+            <input class="sii">
+
+            <br>
+
+            <button class="siBtn" onclick=siFuncSQL()>Sign In</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

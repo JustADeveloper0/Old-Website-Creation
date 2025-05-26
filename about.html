@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+        <title>Plain</title>
+
+        <style>
+
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+            * {
+                padding: 0;
+                margin: 0;
+                outline: none;
+                border: none;
+                box-sizing: border-box;
+            }
+
+            img {
+                width: 150%;
+                display: flex;
+            }
+
+            .nav-logo{
+                max-width: 100px;
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            nav {
+                max-width: 1200px;
+                margin:auto;
+                padding: 2rem 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 2rem;
+            }
+
+            .nav-links {
+                font-family: "Poppins", sans-serif;
+                font-size: 32px;
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                margin: auto;
+                gap: 3rem;
+            }
+
+            .link a{
+                position: relative;
+                padding-bottom: 0.75rem;
+                color: #989fcb;
+            }
+
+            .link a::after{
+                content: "";
+                position: absolute;
+                height: 5px;
+                width: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #71788c;
+                transition: all 0.5s ease;
+            }
+
+            .link a:hover::after{
+                width: 80%;
+            }
+
+            .btn{
+                padding: 1rem 2rem;
+                font-size: 1rem;
+                color: #fff;
+                background-color: #636ea6;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .btn:hover{
+                background-color: #9ba2c2;
+            }
+
+            .Section_1 {
+                font-family: "Poppins", sans-serif;
+                font-size: 40px;
+                color: white;
+                display: flex;
+                margin-left: 42.5vw;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .Section_1:hover {
+                padding-top: 1vh;
+            }
+
+            .b1 {
+                width: 35vw;
+                height: 30vh;
+                background: repeating-linear-gradient(to right, #8f98a7, #939eb1);
+                margin-top: 40vh;
+                margin-left: 10vh;
+                padding-top: 4rem;
+                border-radius: 100px;
+                transform: translateX(-100%);
+                opacity: 0;
+                transition: all 0.7s ease-in-out;
+                filter: blur(5px);
+            }
+
+            .b1.show {
+                transform: translateX(0);
+                opacity: 1;
+                filter: blur(0);
+            }
+
+            #scrollTxt {
+                font-family: "Poppins", sans-serif;
+                font-size: 160px;
+                color: #a9c5f5;
+                display: flex;
+                padding-top: 17.5vh;
+                margin-left: 37.5vw;
+            }
+
+            #Desc {
+                font-family: "Poppins", sans-serif;
+                font-size: 28px;
+                color: #b4cbf2;
+                display: flex;
+                text-align: center;
+            }
+
+            .stop {
+                width: 25vw;
+                margin-left: 75vw;
+                margin-top: -60vh;
+                transform: rotate(0) translateX(20vw);
+                opacity: 0;
+                transition: all 0.7s ease-in-out;
+                filter: blur(5px);
+            }
+
+            .stop.show {
+                transform: rotate(-45deg) translateX(0);;
+                opacity: 1;
+                filter: blur(0);
+            }
+
+            body {
+                background: repeating-linear-gradient(to bottom, #8BC6EC, #9599E2, #8BC6EC);
+                text-align: center;
+                overflow-x: hidden;
+                height:200vh;
+            }
+
+            #signup-form {
+                width: 30vw;
+                height: 70vh;
+                background: linear-gradient(to bottom, #696dad, #b0b4f0);
+                border-radius: 100px;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) translateY(-200%);
+                transition: all 1s ease-in-out;
+            }
+
+            #signin-form {
+                width: 30vw;
+                height: 70vh;
+                background: linear-gradient(to bottom, #696dad, #b0b4f0);
+                border-radius: 100px;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) translateY(-200%);
+                transition: all 1s ease-in-out;
+            }
+
+            #suTitle {
+                color: #b9cedd;
+                font-family: "Poppins", sans-serif;
+                font-size: 50px;
+                margin-top: -7vh;
+            }
+
+            #siTitle {
+                color: #b9cedd;
+                font-family: "Poppins", sans-serif;
+                font-size: 50px;
+                margin-top: -7vh;
+            }
+
+            .suP {
+                color: #99bcd6;
+                font-family: "Poppins", sans-serif;
+                font-size: 32px;
+                padding-top: 3.5vh;
+            }
+
+            .siP {
+                color: #99bcd6;
+                font-family: "Poppins", sans-serif;
+                font-size: 32px;
+                padding-top: 10vh;
+            }
+
+            .suBtn {
+                color: #9ec3dd;
+                background-color: #5f98c4;
+                border-radius: 100px;
+                font-family: "Poppins", sans-serif;
+                font-size: 32px;
+                margin-top: 5vh;
+                padding-top: 0.5vh;
+                width: 10vw;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .siBtn {
+                color: #9ec3dd;
+                background-color: #5f98c4;
+                border-radius: 100px;
+                font-family: "Poppins", sans-serif;
+                font-size: 32px;
+                margin-top: 15vh;
+                padding-top: 0.5vh;
+                width: 10vw;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .suBtn:hover {
+                background-color: #7198b5;
+                width: 10.5vw;
+                
+            }
+
+            .siBtn:hover {
+                background-color: #7198b5;
+                width: 10.5vw;
+                
+            }
+
+            .sui {
+                color: #c1ddf1;
+                background-color: #5f98c4;
+                font-family: "Poppins", sans-serif;
+                font-size: 18px;
+                width: 15vw;
+                border-radius: 20px;
+                text-align: center;
+            }
+
+            .sii {
+                color: #c1ddf1;
+                background-color: #5f98c4;
+                font-family: "Poppins", sans-serif;
+                font-size: 18px;
+                width: 15vw;
+                border-radius: 20px;
+                text-align: center;
+            }
+
+            .CloseButton {
+                width: 2vw;
+                height: 4vh;
+                background: linear-gradient(to bottom, #696dad, #b0b4f0);
+                margin-top: 4.5vh;
+                margin-left: 24.5vw;
+            }
+
+            #CloseImg {
+                width: 2vw;
+                height: 4vh;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <nav>
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img id="logo-img" src="Assets/Logo.png">
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="about.html">About</a></li>
+                <li class="link"><a href="products.html">Products</a></li>
+            </ul>
+
+            <button class="btn" onclick=suFunc()>Sign Up</button>
+            <button class="btn" onclick=siFunc()>Sign In</button>
+        </nav>
+
+        <div class="Section_1">
+            <h1>About</h1>
+        </div>
+
+        <h1 id="scrollTxt">Scroll</h1>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="b1">
+            <p id="Desc">This is a little project im working on. Im using this to learn more about html, css, and javascript. My name is Andrew and I live in Texas. I hope you enjoy my website!</p>
+        </div>
+
+        <img class="stop" src="Assets/StopSign.png">
+
+        <div id="signup-form">
+            <button class="CloseButton" onclick=close1Func()>
+                <image id="CloseImg" src="Assets/Close.png">
+            </button>
+            <h1 id="suTitle">Sign Up</h1>
+
+            <p class="suP">Email: </p>
+            <input class="sui">
+            <p class="suP">Username: </p>
+            <input class="sui">
+            <p class="suP">Password: </p>
+            <input class="sui">
+            <p class="suP">Password Again: </p>
+            <input class="sui">
+
+            <br>
+
+            <button class="suBtn" onclick=suFuncSQL()>Sign Up</button>
+        </div>
+
+        <div id="signin-form">
+            <image id="CloseImg" onclick=close2Func() src="Assets/Close.png">
+                
+            <h1 id="siTitle">Sign In</h1>
+
+            <p class="siP">Email or Username: </p>
+            <input class="sii">
+            <p class="siP">Password: </p>
+            <input class="sii">
+
+            <br>
+
+            <button class="siBtn" onclick=siFuncSQL()>Sign In</button>
+        </div>
+
+        <script>
+            
+            const desc = document.querySelector(".b1");
+
+            const observer1 = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("show", entry.isIntersecting);
+                })
+            }, {
+                threshold: 0.1
+            })
+            
+            observer1.observe(desc)
+
+            const sign = document.querySelector(".stop");
+
+            const observer2 = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("show", entry.isIntersecting);
+                })
+            }, {
+                threshold: 0.1
+            })
+            
+            observer1.observe(sign)
+
+            let suF = document.getElementById('signup-form');
+            let siF = document.getElementById('signin-form');
+
+            function suFunc() {
+                suF.style.transform = "translate(-50%, -50%) translateY(0%)";
+
+                if (siF.style.transform == "translate(-50%, -50%) translateY(0%)") {
+                    siF.style.transform = "translate(-50%, -50%) translateY(-500%)";
+                }
+            }
+
+            function close1Func() {
+                suF.style.transform = "translate(-50%, -50%) translateY(-500%)";
+            }
+
+            function siFunc() {
+                siF.style.transform = "translate(-50%, -50%) translateY(0%)";
+
+                if (suF.style.transform == "translate(-50%, -50%) translateY(0%)") {
+                    suF.style.transform = "translate(-50%, -50%) translateY(-500%)";
+                }
+            }
+
+            function close2Func() {
+                siF.style.transform = "translate(-50%, -50%) translateY(-500%)";
+            }
+
+            function suFuncSQL() {
+                alert("Sign Up (TO BE CONTINUED)");
+            }
+
+            function siFuncSQL() {
+                alert("Sign In (TO BE CONTINUED)");
+            }
+
+        </script>
+    </body>
+</html>
